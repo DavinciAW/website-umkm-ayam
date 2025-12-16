@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Ayam Geprek Davinci</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Ayam Geprek Davinci</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Menu Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row">
+            
+            <div class="col-lg-6 mb-5">
+                <div class="card shadow">
+                    <div class="card-header bg-danger text-white">
+                        <h3 class="h5 mb-0">Hubungi Kami</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="formKontak">
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama:</label>
+                                <input type="text" id="nama" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" id="email" class="form-control" placeholder="nama@gmail.com" required />
+                                <div class="form-text">Kami tidak akan membagikan email Anda.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="kategori" class="form-label">Kategori Pesan:</label>
+                                <select id="kategori" class="form-select">
+                                    <option value="umum">Umum</option>
+                                    <option value="produk">Produk</option>
+                                    <option value="kerjasama">Kerja Sama</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="pesan" class="form-label">Pesan:</label>
+                                <textarea id="pesan" class="form-control" rows="4"></textarea>
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="langganan" value="ya">
+                                <label class="form-check-label" for="langganan">Terima notifikasi berita</label>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Jenis Kelamin:</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="jeniskelamin" id="pria" value="Pria">
+                                    <label class="form-check-label" for="pria">Pria</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="jeniskelamin" id="wanita" value="Wanita">
+                                    <label class="form-check-label" for="wanita">Wanita</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="myfile" class="form-label">Lampiran:</label>
+                                <input type="file" id="myfile" class="form-control">
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                                <button type="reset" class="btn btn-secondary">Bersihkan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card shadow border-info">
+                    <div class="card-header bg-info text-dark">
+                        <h3 class="h5 mb-0">Pendaftaran Webinar Promosi</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="formWebinar" novalidate>
+                            
+                            <div class="mb-3">
+                                <label for="namaLengkap" class="form-label">Nama Lengkap:</label>
+                                <input type="text" id="namaLengkap" class="form-control">
+                                <div class="text-danger small mt-1 error-msg" id="errorNamaLengkap"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="emailWebinar" class="form-label">Email:</label>
+                                <input type="text" id="emailWebinar" class="form-control">
+                                <div class="text-danger small mt-1 error-msg" id="errorEmailWebinar"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="noHP" class="form-label">No HP:</label>
+                                <input type="text" id="noHP" class="form-control">
+                                <div class="text-danger small mt-1 error-msg" id="errorNoHP"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="topikWebinar" class="form-label">Pilih Topik:</label>
+                                <select id="topikWebinar" class="form-select">
+                                    <option value="">-- Pilih Topik --</option>
+                                    <option value="strategi_promosi">Strategi Promosi Produk</option>
+                                    <option value="branding_umkm">Branding untuk UMKM</option>
+                                    <option value="optimasi_sosmed">Optimasi Media Sosial</option>
+                                </select>
+                                <div class="text-danger small mt-1 error-msg" id="errorTopikWebinar"></div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="setuju" class="form-check-input">
+                                <label for="setuju" class="form-check-label">Saya menyetujui syarat & ketentuan</label>
+                                <div class="text-danger small mt-1 error-msg" id="errorSetuju"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-info w-100 fw-bold">Daftar Webinar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 Ayam Geprek Davinci.</p>
+    </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
